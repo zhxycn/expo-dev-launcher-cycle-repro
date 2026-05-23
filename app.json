@@ -1,0 +1,24 @@
+{
+  "expo": {
+    "name": "cycle-repro",
+    "slug": "cycle-repro",
+    "version": "1.0.0",
+    "scheme": "cyclerepro",
+    "platforms": ["ios"],
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "bundleIdentifier": "dev.repro.cyclerepro",
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSSupportsLiveActivities": true,
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "plugins": [
+      "expo-router",
+      "@sentry/react-native",
+      "@bacons/apple-targets"
+    ]
+  }
+}
