@@ -29,6 +29,12 @@ bun install      # or npm/pnpm/yarn install
 eas build -p ios --profile production
 ```
 
+> The `production` profile in `eas.json` is configured to produce a simulator
+> build (`ios.simulator: true`), so **no Apple Developer account or signing
+> credentials are required** to reproduce the cycle. The bug lives in Xcode's
+> build dependency graph, which is identical between simulator and device
+> builds for the relevant phases.
+
 The build fails at the archive step with the cycle path:
 
 ```

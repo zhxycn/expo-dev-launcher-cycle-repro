@@ -4,7 +4,9 @@
     "slug": "cycle-repro",
     "version": "1.0.0",
     "scheme": "cyclerepro",
-    "platforms": ["ios"],
+    "platforms": [
+      "ios"
+    ],
     "orientation": "portrait",
     "userInterfaceStyle": "automatic",
     "ios": {
@@ -19,6 +21,24 @@
       "expo-router",
       "@sentry/react-native",
       "@bacons/apple-targets"
-    ]
+    ],
+    "extra": {
+      "router": {},
+      "eas": {
+        "build": {
+          "experimental": {
+            "ios": {
+              "appExtensions": [
+                {
+                  "bundleIdentifier": "dev.repro.cyclerepro.widget",
+                  "targetName": "widget"
+                }
+              ]
+            }
+          }
+        },
+        "projectId": "2ce404f5-19bb-46d0-a924-64ef96c1f7d8"
+      }
+    }
   }
 }

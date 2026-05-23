@@ -5,6 +5,10 @@
   "build": {
     "production": {
       "autoIncrement": false,
+      "distribution": "internal",
+      "ios": {
+        "simulator": true
+      },
       "env": {
         "SENTRY_DISABLE_AUTO_UPLOAD": "true"
       }
